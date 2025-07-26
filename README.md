@@ -152,6 +152,7 @@ To add a new database type (e.g., Oracle):
 
 ## Docker Compose
 
+```
 version: '3.9'
 
 services:
@@ -162,14 +163,19 @@ services:
       - ./config.json:/app/config.json
     environment:
       - PYTHONUNBUFFERED=1
-
+```
 
 # Build the image
+
+```bash
 docker build -t db-schema-comparator .
+```
 
 # Run it
-docker run --rm -v $(pwd)/reports:/app/reports db-schema-comparator
 
+```bash
+docker run --rm -v $(pwd)/reports:/app/reports db-schema-comparator
+```
 
 ## License
 License: MIT © 2025 Dwarakanath R r.dwarak@gmail.com

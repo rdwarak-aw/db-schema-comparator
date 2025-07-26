@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DB Schema Diff Report</title>
+    <style>
+        body { font-family: Arial; }
+        h2 { color: #2a2a2a; }
+        table { border-collapse: collapse; width: 100%; }
+        tr, td, th { border: 1px solid #ccc; padding: 8px; }
+        .page-break { page-break-after: always; }
+    </style>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        h2 { border-bottom: 2px solid #444; }
+        .section { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Database Schema Comparison Report</h1>
+    <p><strong>Source Database Info:</strong> {{ source.server }}/{{ source.database }}</p>
+    <p><strong>Destination Database Info:</strong> {{ destination.server }}/{{ destination.database }}</p>
+    <p><strong>Report Generated Date:</strong> {{ timestamp }}</p>
+
+    {% for object_type, diffs in diff.items() %}
+    <div class="section">
+        <h2>{{ object_type|capitalize }}</h2>
+
+        {% if diffs.missing_in_dest %}
+            <h3>Missing in Destination {{ destination.server }}/{{ destination.database }}</h3>
+            <ul>
+            {% for obj in diffs.missing_in_dest %}
+                <li>{{ obj }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if diffs.extra_in_dest %}
+            <h3>Extra in Destination {{ destination.server }}/{{ destination.database }}</h3>
+            <ul>
+            {% for obj in diffs.extra_in_dest %}
+                <li>{{ obj }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if diffs.mismatched %}
+            <h3>Mismatched</h3>
+            {% for mismatch in diffs.mismatched %}
+                <h4>{{ mismatch.object }}</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        {% for row in mismatch.diffs %}
+                        <tr>
+                            <td>{{ row.attribute }}</td>
+                            <td>{{ row.source }}</td>
+                            <td>{{ row.destination }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+        {% endif %}
+    </div>
+    {% endfor %}
+</body>
+</html>

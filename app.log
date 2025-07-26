@@ -1,0 +1,57 @@
+2025-07-26 15:38:54,768 - INFO - Starting DB schema comparison...
+2025-07-26 15:38:54,769 - INFO - Using database type: sqlserver
+2025-07-26 15:38:54,960 - INFO - Connected to SQL Server {server}-{database}
+2025-07-26 15:38:55,054 - INFO - Connected to SQL Server {server}-{database}
+2025-07-26 15:38:55,149 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 15:38:55,172 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 15:38:55,250 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 15:38:55,270 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 15:38:55,286 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 15:38:55,359 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 15:38:55,370 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 15:38:55,419 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 15:38:55,445 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 15:38:55,456 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 15:38:55,974 - INFO - Metadata comparison completed.
+2025-07-26 15:38:55,989 - INFO - HTML report generated at: ./reports/schema_diff_report.html
+2025-07-26 15:38:55,990 - INFO - Schema diff completed. Report saved to: ['html']
+2025-07-26 15:38:56,008 - INFO - SQL Server connection closed.
+2025-07-26 15:38:56,025 - INFO - SQL Server connection closed.
+2025-07-26 15:41:10,152 - INFO - Starting DB schema comparison...
+2025-07-26 15:41:10,153 - INFO - Using database type: sqlserver
+2025-07-26 15:41:10,315 - INFO - Connected to SQL Server 10.100.16.109-CMRR6
+2025-07-26 15:41:10,439 - INFO - Connected to SQL Server 10.100.14.102-CMRPlus_R6
+2025-07-26 15:41:10,527 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 15:41:10,559 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 15:41:10,644 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 15:41:10,668 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 15:41:10,677 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 15:41:10,753 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 15:41:10,768 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 15:41:10,836 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 15:41:10,865 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 15:41:10,874 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 15:41:11,206 - INFO - Metadata comparison completed.
+2025-07-26 15:41:11,218 - INFO - HTML report generated at: ./reports/schema_diff_report.html
+2025-07-26 15:41:11,218 - INFO - Schema diff completed. Report saved to: ['html']
+2025-07-26 15:41:11,233 - INFO - SQL Server connection closed.
+2025-07-26 15:41:11,261 - INFO - SQL Server connection closed.
+2025-07-26 16:01:54,387 - INFO - Starting DB schema comparison...
+2025-07-26 16:01:54,388 - INFO - Using database type: sqlserver
+2025-07-26 16:01:54,572 - INFO - Connected to SQL Server 10.100.16.109-CMRR6
+2025-07-26 16:01:54,673 - INFO - Connected to SQL Server 10.100.14.102-CMRPlus_R6
+2025-07-26 16:01:54,759 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 16:01:54,777 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 16:01:54,853 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 16:01:54,876 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 16:01:54,888 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 16:01:54,963 - INFO - Extracted tables for schemas: ['dbo']
+2025-07-26 16:01:54,977 - INFO - Extracted routines for schemas: ['dbo']
+2025-07-26 16:01:55,062 - INFO - Extracted constraints for schemas: ['dbo']
+2025-07-26 16:01:55,087 - INFO - Extracted indexes for schemas: ['dbo']
+2025-07-26 16:01:55,099 - INFO - Extracted triggers for schemas: ['dbo']
+2025-07-26 16:01:55,570 - INFO - Metadata comparison completed.
+2025-07-26 16:01:55,584 - INFO - HTML report generated at: ./reports/schema_diff_report.html
+2025-07-26 16:01:55,585 - INFO - Schema diff completed. Report saved to: ['html']
+2025-07-26 16:01:55,605 - INFO - SQL Server connection closed.
+2025-07-26 16:01:55,620 - INFO - SQL Server connection closed.

@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DB Schema Diff Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        h2 { border-bottom: 2px solid #444; }
+        .section { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Database Schema Comparison Report</h1>
+    <p><strong>Source Database Info:</strong> 10.100.16.109/CMRR6</p>
+    <p><strong>Destination Database Info:</strong> 10.100.14.102/CMRPlus_R6</p>
+    <p><strong>Report Generated Date:</strong> 26 Jul 2025 16:01:55</p>
+
+    
+    <div class="section">
+        <h2>Tables</h2>
+
+        
+            <h3>Missing in Destination 10.100.14.102/CMRPlus_R6</h3>
+            <ul>
+            
+                <li>dbo.Master_APIURL1</li>
+            
+                <li>dbo.Master_Currency</li>
+            
+                <li>dbo.Master_Module2</li>
+            
+                <li>dbo.Master_SubModule2</li>
+            
+                <li>dbo.sysdiagrams</li>
+            
+                <li>dbo.Test</li>
+            
+            </ul>
+        
+
+        
+            <h3>Extra in Destination 10.100.14.102/CMRPlus_R6</h3>
+            <ul>
+            
+                <li>dbo.Master_DocumentTypeStatus</li>
+            
+                <li>dbo.Master_FileExceptionReason</li>
+            
+            </ul>
+        
+
+        
+            <h3>Mismatched</h3>
+            
+                <h4>dbo.Design_Canvas_Component_Execution_Records</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[11]['max_length']</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Design_Canvas_Executions</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[11]['column']</td>
+                            <td>elapsedTime</td>
+                            <td>ElapsedTime</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[11]['max_length']</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Log_Batch</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[25]['column']</td>
+                            <td>Configprocess</td>
+                            <td>ConfigProcess</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Log_FieldTrainingHistory</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[4]['max_length']</td>
+                            <td>50</td>
+                            <td>250</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Log_File</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[21]</td>
+                            <td>not present</td>
+                            <td>{'column': 'Tagging_Status', 'data_type': 'varchar', 'max_length': 100}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Log_Taxonomy</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[5]</td>
+                            <td>{'column': 'ResultID', 'data_type': 'int', 'max_length': 4}</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Master_Field</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[35]['data_type']</td>
+                            <td>varchar</td>
+                            <td>nvarchar</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[35]['max_length']</td>
+                            <td>250</td>
+                            <td>500</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Master_Field_Technique</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[15]['data_type']</td>
+                            <td>varchar</td>
+                            <td>nvarchar</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[15]['max_length']</td>
+                            <td>20</td>
+                            <td>40</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Master_User</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[2]['max_length']</td>
+                            <td>400</td>
+                            <td>402</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[4]['max_length']</td>
+                            <td>400</td>
+                            <td>100</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.Trans_DocumentLog</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[17]['column']</td>
+                            <td>batchtypeid</td>
+                            <td>BatchTypeID</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        
+    </div>
+    
+    <div class="section">
+        <h2>Functions</h2>
+
+        
+            <h3>Missing in Destination 10.100.14.102/CMRPlus_R6</h3>
+            <ul>
+            
+                <li>dbo.fn_diagramobjects</li>
+            
+            </ul>
+        
+
+        
+
+        
+            <h3>Mismatched</h3>
+            
+                <h4>dbo.GenerateConfidenceScore</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root</td>
+                            <td>  
+CREATE   FUNCTION [dbo].[GenerateConfidenceScore]  
+(  
+ @FieldID INT,  
+ @ColumnID INT  
+)  
+ RETURNS  DECIMAL(18,2)  
+AS  
+BEGIN  
+ DECLARE @TempTable TABLE   
+ ( ROWID INT ,  
+   Confidencescore decimal (18,2)  
+ );  
+  
+ INSERT INTO @TempTable  
+ SELECT ROW_NUMBER() OVER (ORDER BY Confidencescore ASC) AS ROWID,Confidencescore   
+ FROM Log_Result where FieldID=@FieldID and ColumnID=@ColumnID  
+ ORDER BY ROWID,Confidencescore ASC  
+  
+ DECLARE @Confidencescore decimal(18,2)  
+ DECLARE @tablelength INT=(SELECT Count(*) FROM @TempTable)   
+  
+ IF (@tablelength >=50)  
+ BEGIN  
+  DECLARE @RowIndex DECIMAL(18,2),@OddConfidencescore1 DECIMAL(18,2),@OddConfidencescore2 DECIMAL(18,2);  
+  DECLARE @averegeCount int= (@tablelength+1)%2  
+  SET @RowIndex=(@tablelength+1)/2;  
+ IF @averegeCount=0  
+ BEGIN  
+  SET @Confidencescore=(SELECT Confidencescore AS MeanValue FROM @TempTable WHERE ROWID=@RowIndex)  
+ END  
+ ELSE  
+ BEGIN  
+  SET @OddConfidencescore1=(SELECT Confidencescore FROM @TempTable WHERE ROWID=@RowIndex)  
+  SET @OddConfidencescore2  =(SELECT Confidencescore  FROM @TempTable WHERE ROWID=@RowIndex+1)  
+  SET @Confidencescore =(@OddConfidencescore1+@OddConfidencescore2)/2  
+ END  
+ END   
+ ELSE  
+ SET @Confidencescore=-1;  
+  
+ RETURN @Confidencescore  
+END  </td>
+                            <td>    
+CREATE   FUNCTION [dbo].[GenerateConfidenceScore]    
+(    
+ @FieldID INT,    
+ @ColumnID INT    
+)    
+ RETURNS  DECIMAL(18,2)    
+AS    
+BEGIN    
+ DECLARE @TempTable TABLE     
+ ( ROWID INT ,    
+   Confidencescore decimal (18,2)    
+ );    
+    
+ INSERT INTO @TempTable    
+ SELECT ROW_NUMBER() OVER (ORDER BY Confidencescore ASC) AS ROWID,Confidencescore     
+ FROM Log_Result where FieldID=@FieldID and ColumnID=@ColumnID    
+ ORDER BY ROWID,Confidencescore ASC    
+    
+ DECLARE @Confidencescore decimal(18,2)    
+ DECLARE @tablelength INT=(SELECT Count(*) FROM @TempTable)     
+    
+ IF (@tablelength >=50)    
+ BEGIN    
+  DECLARE @RowIndex DECIMAL(18,2),@OddConfidencescore1 DECIMAL(18,2),@OddConfidencescore2 DECIMAL(18,2);    
+  DECLARE @averegeCount int= (@tablelength+1)%2    
+  SET @RowIndex=(@tablelength+1)/2;    
+ IF @averegeCount=0    
+ BEGIN    
+  SET @Confidencescore=(SELECT Confidencescore AS MeanValue FROM @TempTable WHERE ROWID=@RowIndex)    
+ END    
+ ELSE    
+ BEGIN    
+  SET @OddConfidencescore1=(SELECT Confidencescore FROM @TempTable WHERE ROWID=@RowIndex)    
+  SET @OddConfidencescore2  =(SELECT Confidencescore  FROM @TempTable WHERE ROWID=@RowIndex+1)    
+  SET @Confidencescore =(@OddConfidencescore1+@OddConfidencescore2)/2    
+ END    
+ END     
+ ELSE    
+ SET @Confidencescore=-1;    
+    
+ RETURN @Confidencescore    
+END 
+
+
+</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.FindFileQCType</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root</td>
+                            <td>CREATE        FUNCTION [dbo].[FindFileQCType](@FileID INT)    
+RETURNS VARCHAR(50)    
+AS    
+BEGIN    
+ DECLARE @QCType VARCHAR(50) = ''    
+    
+ IF EXISTS(SELECT top 1 1 AS R FROM Log_Result WHERE FileID = @FileID AND ConfidenceFlag <> 'GREEN')    
+ BEGIN    
+  SET @QCType = 'Manual'    
+ END    
+ ELSE    
+ BEGIN    
+  IF NOT EXISTS(SELECT top 1 1 AS R FROM Log_Result WHERE FileID = @FileID)    
+   SET @QCType = 'Manual'   
+  ELSE   
+  BEGIN  
+  IF ((Select count(0) from EDA_KafkaFields WHERE FileID = @FileID) != (Select count(0) from Log_Result WHERE FileID = @FileID))  
+    SET @QCType = 'Manual'   
+  ELSE     
+   SET @QCType = 'Auto QC'   
+  END  
+ END    
+    
+ RETURN @QCType    
+    
+END  
+</td>
+                            <td>CREATE   FUNCTION [dbo].[FindFileQCType](@FileID INT)  
+RETURNS VARCHAR(50)  
+AS  
+BEGIN  
+DECLARE @QCType VARCHAR(50)= ''  
+  
+IF EXISTS (SELECT TOP 1 1 AS R FROM Log_Result WHERE FileID = @FileID AND ConfidenceFlag <> 'GREEN')  
+BEGIN   
+SET @QCType= 'Manual'  
+END  
+ELSE  
+BEGIN  
+IF NOT EXISTS (SELECT TOP 1 1 AS R FROM Log_Result WHERE FileID= @FileID)  
+SET @QCType ='Manual'  
+ELSE  
+BEGIN  
+IF((SELECT COUNT(0) FROM EDA_KafkaFields WHERE FileId=@FileID) != (SELECT COUNT(0) FROM Log_Result WHERE FileID=@FileID))  
+SET @QCType='Manual'  
+ELSE  
+SET @QCType='Auto QC'  
+END  
+END  
+  
+RETURN @QCType  
+  
+END  
+</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.IsCondifdenceTrained</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root</td>
+                            <td>
+CREATE   FUNCTION [dbo].[IsCondifdenceTrained](@FieldID INT)
+RETURNS bit
+AS
+BEGIN
+
+DECLARE @IsModelCreated bit = 0
+DECLARE @blnIsConfidenceScore BIT = 0
+DECLARE @blnAutoQC BIT = 0
+select @blnIsConfidenceScore = IsConfidenceScore from Master_Field where FieldID = @FieldID
+select top 1 @blnAutoQC = AutoQc  from ConfidenceScore_TrainingResult WHERE FieldID = @FieldID order by ConfidenceScore_TrainingResultID desc
+
+	IF (@blnIsConfidenceScore = 0)
+		Set @IsModelCreated = 0
+	ELSE 
+	Begin
+		--If any entry present in ConfidenceScore_TrainingResult for that field
+		IF EXISTS(SELECT TOP 1 AutoQc from ConfidenceScore_TrainingResult WHERE FieldID = @FieldID)  
+			Set @IsModelCreated = 1
+		ELSE
+			Set @IsModelCreated = 0
+	END
+
+	return @IsModelCreated;
+
+END
+</td>
+                            <td>  
+CREATE   FUNCTION [dbo].[IsCondifdenceTrained](@FieldID INT)  
+RETURNS bit  
+AS  
+BEGIN  
+  
+DECLARE @IsModelCreated bit = 0  
+DECLARE @blnIsConfidenceScore BIT = 0  
+DECLARE @blnAutoQC BIT = 0  
+select @blnIsConfidenceScore = IsConfidenceScore from Master_Field where FieldID = @FieldID  
+select top 1 @blnAutoQC = AutoQc  from ConfidenceScore_TrainingResult WHERE FieldID = @FieldID order by ConfidenceScore_TrainingResultID desc  
+  
+ IF (@blnIsConfidenceScore = 0)  
+  Set @IsModelCreated = 0  
+ ELSE   
+ Begin  
+  --If any entry present in ConfidenceScore_TrainingResult for that field  
+  IF EXISTS(SELECT TOP 1 AutoQc from ConfidenceScore_TrainingResult WHERE FieldID = @FieldID)    
+   Set @IsModelCreated = 1  
+  ELSE  
+   Set @IsModelCreated = 0  
+ END  
+  
+ return @IsModelCreated;  
+  
+END  
+</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.GetConfidenceFlag</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root</td>
+                            <td>
+
+CREATE   FUNCTION [dbo].[GetConfidenceFlag]
+(    
+	@FieldD INT=0,
+	@ColumnID INT=0,
+	@PredictionValue NVARCHAR(500),
+    @ConfidenceScore DECIMAL(18,2)
+)
+RETURNS varchar(15)
+AS
+BEGIN
+	DECLARE @ConfidenceFlag VARCHAR(10),@RevisedConfidentScore decimal(18,2)
+	 
+	IF @PredictionValue=''
+		SET @ConfidenceFlag = 'RED'
+	ELSE
+		BEGIN
+			SET   @RevisedConfidentScore  =dbo.GenerateConfidenceScore(@FieldD,@ColumnID)
+			IF (@RevisedConfidentScore >= 0.80 and @RevisedConfidentScore <= 1) OR (@RevisedConfidentScore = -1 AND @ConfidenceScore = 1)
+				SET @ConfidenceFlag = 'GREEN'
+			ELSE IF (@RevisedConfidentScore >= 0 OR (@RevisedConfidentScore = -1 AND @ConfidenceScore >= 0))
+				--SET @ConfidenceFlag = 'AMBER'
+				SET @ConfidenceFlag = 'GREEN'
+			ELSE 
+				SET @ConfidenceFlag = 'RED'
+		END
+    RETURN @ConfidenceFlag
+END
+</td>
+                            <td>  
+  
+CREATE   FUNCTION [dbo].[GetConfidenceFlag]  
+(      
+ @FieldD INT=0,  
+ @ColumnID INT=0,  
+ @PredictionValue NVARCHAR(500),  
+    @ConfidenceScore DECIMAL(18,2)  
+)  
+RETURNS varchar(15)  
+AS  
+BEGIN  
+ DECLARE @ConfidenceFlag VARCHAR(10),@RevisedConfidentScore decimal(18,2)  
+    
+ IF @PredictionValue=''  
+  SET @ConfidenceFlag = 'RED'  
+ ELSE  
+  BEGIN  
+   SET   @RevisedConfidentScore  =dbo.GenerateConfidenceScore(@FieldD,@ColumnID)  
+   IF (@RevisedConfidentScore >= 0.80 and @RevisedConfidentScore <= 1) OR (@RevisedConfidentScore = -1 AND @ConfidenceScore = 1)  
+    SET @ConfidenceFlag = 'GREEN'  
+   ELSE IF (@RevisedConfidentScore >= 0 OR (@RevisedConfidentScore = -1 AND @ConfidenceScore >= 0))  
+    --SET @ConfidenceFlag = 'AMBER'  
+    SET @ConfidenceFlag = 'GREEN'  
+   ELSE   
+    SET @ConfidenceFlag = 'RED'  
+  END  
+    RETURN @ConfidenceFlag  
+END  
+</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>dbo.BR_ParentFieldID_Split</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root</td>
+                            <td>CREATE FUNCTION [dbo].[BR_ParentFieldID_Split] 
+( 
+    @string NVARCHAR(MAX), 
+    @Maindelimiter CHAR(1),
+	@containstring NVARCHAR(MAX), 
+    @secondarydelimiter CHAR(1)
+) 
+RETURNS NVARCHAR(MAX)
+AS
+BEGIN 
+    DECLARE @start INT, @end INT
+	DECLARE @outputvalue NVARCHAR(MAX),@Returnvalue NVARCHAR(MAX)
+    SELECT @start = 1, @end = CHARINDEX(@Maindelimiter, @string) 
+	SET @containstring = CONCAT('%', LOWER(@containstring),'%');
+    WHILE @start < LEN(@string) + 1 
+	BEGIN 
+        IF @end = 0 
+		BEGIN
+            SET @end = LEN(@string) + 1
+		END
+       SET @outputvalue = SUBSTRING(@string, @start, @end - @start)
+	   IF(LOWER(@outputvalue) like @containstring)
+	   BEGIN
+	     SET @outputvalue = SUBSTRING(@outputvalue,  CHARINDEX(@secondarydelimiter, @outputvalue, 1)+1,LEN(@outputvalue) + 1)		
+		 SET @outputvalue = LTRIM(RTRIM(@outputvalue));
+		 SET @Returnvalue = CONCAT(@Returnvalue,',',@outputvalue)        
+		END
+		SET @start = @end + 1 
+        SET @end = CHARINDEX(@Maindelimiter, @string, @start)   
+    END 
+    RETURN @Returnvalue
+END
+</td>
+                            <td>CREATE FUNCTION [dbo].[BR_ParentFieldID_Split]   
+(   
+    @string NVARCHAR(MAX),   
+    @Maindelimiter CHAR(1),  
+ @containstring NVARCHAR(MAX),   
+    @secondarydelimiter CHAR(1)  
+)   
+RETURNS NVARCHAR(MAX)  
+AS  
+BEGIN   
+    DECLARE @start INT, @end INT  
+ DECLARE @outputvalue NVARCHAR(MAX),@Returnvalue NVARCHAR(MAX)  
+    SELECT @start = 1, @end = CHARINDEX(@Maindelimiter, @string)   
+ SET @containstring = CONCAT('%', LOWER(@containstring),'%');  
+    WHILE @start < LEN(@string) + 1   
+ BEGIN   
+        IF @end = 0   
+  BEGIN  
+            SET @end = LEN(@string) + 1  
+  END  
+       SET @outputvalue = SUBSTRING(@string, @start, @end - @start)  
+    IF(LOWER(@outputvalue) like @containstring)  
+    BEGIN  
+      SET @outputvalue = SUBSTRING(@outputvalue,  CHARINDEX(@secondarydelimiter, @outputvalue, 1)+1,LEN(@outputvalue) + 1)    
+   SET @outputvalue = LTRIM(RTRIM(@outputvalue));  
+   SET @Returnvalue = CONCAT(@Returnvalue,',',@outputvalue)          
+  END  
+  SET @start = @end + 1   
+        SET @end = CHARINDEX(@Maindelimiter, @string, @start)     
+    END   
+    RETURN @Returnvalue  
+END  
+</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        
+    </div>
+    
+    <div class="section">
+        <h2>Constraints</h2>
+
+        
+
+        
+
+        
+            <h3>Mismatched</h3>
+            
+                <h4>primary_keys</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root['dbo.Log_QAProductivity'][0]['constraint_name']</td>
+                            <td>PK__Log_QAPr__5E5499A83408BCE6</td>
+                            <td>PK__Log_QAPr__5E5499A87115C3B8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_SchedulerType'][0]['constraint_name']</td>
+                            <td>PK__Master_S__D48286E83AC84E19</td>
+                            <td>PK__Master_S__D48286E8C21F9B39</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_SDK_Activity'][0]['constraint_name']</td>
+                            <td>PK__Master_S__45F4A7F19F035CC9</td>
+                            <td>PK__Master_S__45F4A7F12BC136B1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_SDK_Module'][0]['constraint_name']</td>
+                            <td>PK__Master_S__2B747787AB4F5843</td>
+                            <td>PK__Master_S__2B7477872779C3E0</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_Taxonomy'][0]['constraint_name']</td>
+                            <td>PK__Log_Taxo__224134E7A20FA1C5</td>
+                            <td>PK__Log_Taxo__224134E7AE8CCB0F</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_TechniqueTrainingHistory'][0]['constraint_name']</td>
+                            <td>PK__Log_Tech__C5692DE5FD38B85C</td>
+                            <td>PK__Log_Tech__C5692DE578AA7E8D</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_User_CustomSettings'][0]['constraint_name']</td>
+                            <td>PK__Map_User__61AE2957F02AFBF8</td>
+                            <td>PK__Map_User__61AE2957058BC385</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_SubModule'][0]['constraint_name']</td>
+                            <td>PK__Master_S__79BB0652E917E5EE</td>
+                            <td>PK__Master_S__79BB065242CD8E9F</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldAssociation'][0]['constraint_name']</td>
+                            <td>PK__Map_Fiel__3265E2FB528960E3</td>
+                            <td>PK__Map_Fiel__3265E2FBEA5E591C</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldKeyPair'][0]['constraint_name']</td>
+                            <td>PK__Map_Fiel__3265E2FB16E910FE</td>
+                            <td>PK__Map_Fiel__3265E2FB2FF64EF1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldLookupUpload'][0]['constraint_name']</td>
+                            <td>PK__Map_Fiel__3265E2FBBD287B99</td>
+                            <td>PK__Map_Fiel__3265E2FBA9A782B8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ZoneSection'][0]['constraint_name']</td>
+                            <td>PK__Master_Z__D2ECF83D8061A08C</td>
+                            <td>PK__Master_Z__D2ECF83DDFC2418D</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_PlatformSDK'][0]['constraint_name']</td>
+                            <td>PK__Map_Plat__3265E2FB4985FFB6</td>
+                            <td>PK__Map_Plat__3265E2FBBCCB1D14</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.NotificationService'][0]['constraint_name']</td>
+                            <td>PK__Notifica__0116274B2C22768E</td>
+                            <td>PK__Notifica__0116274BB1DFE060</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_UserProcess'][0]['constraint_name']</td>
+                            <td>PK__Map_User__B3C6D6AB1B11CC63</td>
+                            <td>PK__Map_User__B3C6D6ABC5AFFDC1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.UserCustomSettingsMaster'][0]['constraint_name']</td>
+                            <td>PK__UserCust__AA0F889AC3B0082B</td>
+                            <td>PK__UserCust__AA0F889A78594313</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.NotificationStatus'][0]['constraint_name']</td>
+                            <td>PK__Notifica__20CF2E3226FDDAD0</td>
+                            <td>PK__Notifica__20CF2E32029E9104</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_AdditionalContext'][0]['constraint_name']</td>
+                            <td>PK__Master_A__CC5184C30E2CEDC7</td>
+                            <td>PK__Master_A__CC5184C3AF91EF2D</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Option_CheckBox'][0]['constraint_name']</td>
+                            <td>PK__Option_C__92C7A1DF21B13017</td>
+                            <td>PK__Option_C__92C7A1DFB7106E23</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_Component_DataTypes'][0]['constraint_name']</td>
+                            <td>PK__Map_Comp__3265E2FB18F674B2</td>
+                            <td>PK__Map_Comp__3265E2FB08F5D151</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_Field_Component'][0]['constraint_name']</td>
+                            <td>PK__Map_Fiel__3265E2FB80A852D1</td>
+                            <td>PK__Map_Fiel__3265E2FB56B05BD6</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Components'][0]['constraint_name']</td>
+                            <td>PK__Master_C__3214EC27B0BDE947</td>
+                            <td>PK__Master_C__3214EC27DC9F2D2E</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Components_Property'][0]['constraint_name']</td>
+                            <td>PK__Master_C__3214EC272C2F3E70</td>
+                            <td>PK__Master_C__3214EC270F350B00</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Technique'][0]['constraint_name']</td>
+                            <td>PK__Master_T__3214EC279A3CAD9D</td>
+                            <td>PK__Master_T__3214EC2749EBDF58</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Technique_Type'][0]['constraint_name']</td>
+                            <td>PK__Master_T__3214EC27587CB119</td>
+                            <td>PK__Master_T__3214EC274F1EC5A1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ContentDirection'][0]['constraint_name']</td>
+                            <td>PK__Master_C__C2F38D05A7803FC8</td>
+                            <td>PK__Master_C__C2F38D05E5199ADE</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ContextOptionalAnchors'][0]['constraint_name']</td>
+                            <td>PK__Master_C__0774022144B95B20</td>
+                            <td>PK__Master_C__07740221C5A76A7B</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ContextZone'][0]['constraint_name']</td>
+                            <td>PK__Master_C__5A5F148228DC103B</td>
+                            <td>PK__Master_C__5A5F14827E86ED0D</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.RefreshToken'][0]['constraint_name']</td>
+                            <td>PK__RefreshT__F5845E590ABB0117</td>
+                            <td>PK__RefreshT__F5845E5935DF56C8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Report_FieldMode'][0]['constraint_name']</td>
+                            <td>PK__Report_F__D83F75E40BD47CD7</td>
+                            <td>PK__Report_F__D83F75E4E312FB24</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Servers'][0]['constraint_name']</td>
+                            <td>PK__Servers__C56AC8868A478325</td>
+                            <td>PK__Servers__C56AC886E952AC91</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Setting_Batch'][0]['constraint_name']</td>
+                            <td>PK__Setting___95AA539BC05C44B1</td>
+                            <td>PK__Setting___95AA539B28D728A3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_DirectoryModule'][0]['constraint_name']</td>
+                            <td>PK__Master_D__41CBD5B6AB44A8FE</td>
+                            <td>PK__Master_D__41CBD5B69F43A1FB</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Setting_Configuration'][0]['constraint_name']</td>
+                            <td>PK__Setting___95AA539BA77F9CE5</td>
+                            <td>PK__Setting___95AA539BE7D1BE7D</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Setting_Training'][0]['constraint_name']</td>
+                            <td>PK__Setting___95AA539B7FA5377E</td>
+                            <td>PK__Setting___95AA539B24F83DAF</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ExportDataPath'][0]['constraint_name']</td>
+                            <td>PK__Master_E__E5C997A4246B4BDD</td>
+                            <td>PK__Master_E__E5C997A40EE71AA6</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Setting_Web'][0]['constraint_name']</td>
+                            <td>PK__Setting___C3BC333C959BBCB2</td>
+                            <td>PK__Setting___C3BC333CF75AEE70</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Expression'][0]['constraint_name']</td>
+                            <td>PK__Master_E__6C101015D1217821</td>
+                            <td>PK__Master_E__6C1010152B3FED60</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.UserAccessToken'][0]['constraint_name']</td>
+                            <td>PK__UserAcce__E7DD099C53866AA8</td>
+                            <td>PK__UserAcce__E7DD099CAD5B91DB</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_FieldMode'][0]['constraint_name']</td>
+                            <td>PK__Master_F__820CA3830BE3F269</td>
+                            <td>PK__Master_F__820CA3838FC1A96F</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_FieldNestedMode'][0]['constraint_name']</td>
+                            <td>PK__Master_F__30739DA0691320C4</td>
+                            <td>PK__Master_F__30739DA086AA0598</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Authentication_Scheme'][0]['constraint_name']</td>
+                            <td>PK__Master_A__3214EC073944B500</td>
+                            <td>PK__Master_A__3214EC078030826F</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Protocol_Type'][0]['constraint_name']</td>
+                            <td>PK__Master_P__3214EC07E5A170FE</td>
+                            <td>PK__Master_P__3214EC07F10D98DC</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_UserType'][0]['constraint_name']</td>
+                            <td>PK__Master_U__40D2D8F6A2E863CD</td>
+                            <td>PK__Master_U__40D2D8F658C401B3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.AccessToken'][0]['constraint_name']</td>
+                            <td>PK__AccessTo__8FB8418331DC7E8D</td>
+                            <td>PK__AccessTo__8FB8418322AE068A</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.ClientInfo_Log_Audit'][0]['constraint_name']</td>
+                            <td>PK__ClientIn__F78476A7EC05DD30</td>
+                            <td>PK__ClientIn__F78476A76BF2150A</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Lookup'][0]['constraint_name']</td>
+                            <td>PK__Master_L__6D8B9C6B30EBBBC5</td>
+                            <td>PK__Master_L__6D8B9C6BEB4A539E</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.CMRQuartzJobHistories'][0]['constraint_name']</td>
+                            <td>PK__CMRQuart__A809D9F4EF1993FF</td>
+                            <td>PK__CMRQuart__A809D9F460347F82</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Module'][0]['constraint_name']</td>
+                            <td>PK__Master_M__2B7477874E734936</td>
+                            <td>PK__Master_M__2B747787CA43DC08</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Design_Canvas_Component_Execution_Records'][0]['constraint_name']</td>
+                            <td>PK__Design_C__3214EC277A2F038A</td>
+                            <td>PK__Design_C__3214EC27B94A0F49</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_NotificationMessageType'][0]['constraint_name']</td>
+                            <td>PK__Master_N__6AF24DF2AE1F2AC5</td>
+                            <td>PK__Master_N__6AF24DF224B4D8ED</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_NotificationUserGroup'][0]['constraint_name']</td>
+                            <td>PK__Master_N__FA5A61E070056BD0</td>
+                            <td>PK__Master_N__FA5A61E025CB9C2F</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Design_Canvas_Executions'][0]['constraint_name']</td>
+                            <td>PK__WorkFlow__3214EC27C5282B1F</td>
+                            <td>PK__Design_C__473088E5F9B31E43</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_Token'][0]['constraint_name']</td>
+                            <td>PK__Log_Toke__C456D729F3F2D997</td>
+                            <td>PK__Log_Toke__C456D729144C04D8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ReasonQAProductivity'][0]['constraint_name']</td>
+                            <td>PK__Master_R__A4F8C0C73937AA1C</td>
+                            <td>PK__Master_R__A4F8C0C7D20B25F1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Report'][0]['constraint_name']</td>
+                            <td>PK__Master_R__D5BD48E55887F57E</td>
+                            <td>PK__Master_R__D5BD48E5596D20D1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Export_Scheduler'][0]['constraint_name']</td>
+                            <td>PK__Export_S__E5C997A4F6477E05</td>
+                            <td>PK__Export_S__E5C997A43FF74AA1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ReportState'][0]['constraint_name']</td>
+                            <td>PK__Master_R__70E2E2C71F22CF76</td>
+                            <td>PK__Master_R__70E2E2C789DB5127</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_FieldTrainingHistory'][0]['constraint_name']</td>
+                            <td>PK__Log_Fiel__CB15A66AF8CACC38</td>
+                            <td>PK__Log_Fiel__CB15A66ACA612DB6</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_ReportType'][0]['constraint_name']</td>
+                            <td>PK__Master_R__78CF8C836B0CEB95</td>
+                            <td>PK__Master_R__78CF8C834E7077B8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Role'][0]['constraint_name']</td>
+                            <td>PK__Master_R__8AFACE3AAB70C73B</td>
+                            <td>PK__Master_R__8AFACE3A543C2554</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.sysdiagrams']</td>
+                            <td>[{'constraint_name': 'PK__sysdiagr__C2B05B6198E9376D', 'column': 'diagram_id'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Module2']</td>
+                            <td>[{'constraint_name': 'PK__Master_M__2B74778790F17FEC', 'column': 'ModuleID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_SubModule2']</td>
+                            <td>[{'constraint_name': 'PK__Master_S__79BB06528FC299E8', 'column': 'SubModuleID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Currency']</td>
+                            <td>[{'constraint_name': 'PK_Master_Currency', 'column': 'CurrencyID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_DocumentTypeStatus']</td>
+                            <td>not present</td>
+                            <td>[{'constraint_name': 'PK_Master_DocumentTypeStatus', 'column': 'DocumentStatusID'}]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_FileExceptionReason']</td>
+                            <td>not present</td>
+                            <td>[{'constraint_name': 'PK__Master_F__26981DA837F1F02C', 'column': 'ExceptionID'}]</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>foreign_keys</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldKeyPair']</td>
+                            <td>[{'constraint_name': 'fk_fldKeyPair_Direction_id', 'column': 'ContentDirectionID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_RoleModule']</td>
+                            <td>[{'constraint_name': 'FK__Map_RoleM__Entry__69D19EED', 'column': 'EntryBy'}, {'constraint_name': 'FK__Map_RoleM__Entry__6D9742D9', 'column': 'EntryBy'}, {'constraint_name': 'FK__Map_RoleM__RoleI__17F790F9', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__18EBB532', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__19DFD96B', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__1AD3FDA4', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__1BC821DD', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__1CBC4616', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__1DB06A4F', 'column': 'RoleID'}, {'constraint_name': 'FK__Map_RoleM__RoleI__1EA48E88', 'column': 'RoleID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_UserProcess']</td>
+                            <td>[{'constraint_name': 'FK__Map_UserP__Entry__4E53A1AA', 'column': 'EntryBy'}, {'constraint_name': 'FK__Map_UserP__Proce__6F7F8B4B', 'column': 'ProcessID'}, {'constraint_name': 'FK__Map_UserP__UserI__4B7734FF', 'column': 'UserID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Client']</td>
+                            <td>[{'constraint_name': 'FK__Master_Cl__Entry__339FAB6E', 'column': 'EntryBy'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Department']</td>
+                            <td>[{'constraint_name': 'FK__Master_De__Clien__725BF7F6', 'column': 'ClientID'}, {'constraint_name': 'FK__Master_De__Entry__395884C4', 'column': 'EntryBy'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Process']</td>
+                            <td>[{'constraint_name': 'FK__Master_Pr__DeptI__7AF13DF7', 'column': 'DeptID'}, {'constraint_name': 'FK__Master_Pr__Entry__3F115E1A', 'column': 'EntryBy'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.UserAccessToken']</td>
+                            <td>[{'constraint_name': 'FK__UserAcces__Acces__2A164134', 'column': 'AccessTokenID'}, {'constraint_name': 'FK__UserAcces__Acces__2B0A656D', 'column': 'AccessTokenID'}, {'constraint_name': 'FK__UserAcces__Acces__2BFE89A6', 'column': 'AccessTokenID'}, {'constraint_name': 'FK__UserAcces__Acces__2CF2ADDF', 'column': 'AccessTokenID'}, {'constraint_name': 'FK__UserAcces__Refre__2DE6D218', 'column': 'RefreshTokenID'}, {'constraint_name': 'FK__UserAcces__Refre__2EDAF651', 'column': 'RefreshTokenID'}, {'constraint_name': 'FK__UserAcces__Refre__2FCF1A8A', 'column': 'RefreshTokenID'}, {'constraint_name': 'FK__UserAcces__Refre__30C33EC3', 'column': 'RefreshTokenID'}, {'constraint_name': 'FK__UserAcces__Serve__31B762FC', 'column': 'ServerID'}, {'constraint_name': 'FK__UserAcces__Serve__32AB8735', 'column': 'ServerID'}, {'constraint_name': 'FK__UserAcces__Serve__339FAB6E', 'column': 'ServerID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.UserPassword_History']</td>
+                            <td>[{'constraint_name': 'FK_UserPassword_History_Master_User', 'column': 'UserID'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Design_Canvas_Executions']</td>
+                            <td>not present</td>
+                            <td>[{'constraint_name': 'FK_Design_Canvas_Executions_Definitions', 'column': 'Design_Canvas_Definition_ID'}]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_Result']</td>
+                            <td>not present</td>
+                            <td>[{'constraint_name': 'FK__Log_Resul__Field__2AA05119', 'column': 'FieldID'}, {'constraint_name': 'FK__Log_Resul__FileI__29AC2CE0', 'column': 'FileID'}, {'constraint_name': 'FK__Log_Resul__Updat__2C88998B', 'column': 'UpdatedBy'}]</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Log_TrainingHistory'][1]</td>
+                            <td>{'constraint_name': 'FK__Log_Train__Stopp__000AF8CF', 'column': 'StoppedBy'}</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldAssociation'][0]</td>
+                            <td>{'constraint_name': 'fk_fldAssociation_Direction_id', 'column': 'ContentDirectionID'}</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldAssociation'][2]</td>
+                            <td>{'constraint_name': 'fk_fldAssociation_Zone_id', 'column': 'ZoneSectionID'}</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldLookupUpload'][2]</td>
+                            <td>not present</td>
+                            <td>{'constraint_name': 'FK__Map_Field__Field__1EF99443', 'column': 'FieldID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Report'][1]</td>
+                            <td>not present</td>
+                            <td>{'constraint_name': 'FK__Master_Re__Repor__2C538F61', 'column': 'ReportTypeID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_Report'][0]</td>
+                            <td>{'constraint_name': 'FK__Master_Re__Repor__11FF8BD8', 'column': 'ReportTypeID'}</td>
+                            <td>{'constraint_name': 'FK__Master_Re__Repor__2B5F6B28', 'column': 'ReportTypeID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldLookupUpload'][1]</td>
+                            <td>{'constraint_name': 'FK__Map_Field__Field__1D314762', 'column': 'FieldID'}</td>
+                            <td>{'constraint_name': 'FK__Map_Field__Field__1E05700A', 'column': 'FieldID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Map_FieldLookupUpload'][0]</td>
+                            <td>{'constraint_name': 'FK__Map_Field__Field__1C3D2329', 'column': 'FieldID'}</td>
+                            <td>{'constraint_name': 'FK__Map_Field__Field__1D114BD1', 'column': 'FieldID'}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+                <h4>unique_constraints</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root['dbo.UserCustomSettingsMaster'][0]['constraint_name']</td>
+                            <td>UQ__UserCust__2C791E3EC61C4DEE</td>
+                            <td>UQ__UserCust__2C791E3EE7E4FAAC</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_StatusFile'][0]</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE2042BAF91FC7', 'column': 'StatusID'}</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE20425EB0CD2B', 'column': 'StatusID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_StatusBatch'][1]</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE2042EC1BDAAC', 'column': 'StatusID'}</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE20422DCE6DDA', 'column': 'StatusID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_StatusBatch'][0]</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE20420FFF380A', 'column': 'StatusID'}</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE204218DE8C2F', 'column': 'StatusID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.Master_StatusFile'][1]</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE2042A4242553', 'column': 'StatusID'}</td>
+                            <td>{'constraint_name': 'UQ__Master_S__C8EE2042A9CE714C', 'column': 'StatusID'}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root['dbo.sysdiagrams']</td>
+                            <td>[{'constraint_name': 'UK_principal_name', 'column': 'principal_id'}, {'constraint_name': 'UK_principal_name', 'column': 'name'}]</td>
+                            <td>not present</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        
+    </div>
+    
+    <div class="section">
+        <h2>Indexes</h2>
+
+        
+            <h3>Missing in Destination 10.100.14.102/CMRPlus_R6</h3>
+            <ul>
+            
+                <li>dbo.ClientInfo_Log_Audit.IX_ClientInfo_Log_Audit_TokenID</li>
+            
+                <li>dbo.Log_File.IX_Log_File_FileProcessStartDate</li>
+            
+                <li>dbo.Log_File.IX_LogFile_FileName</li>
+            
+                <li>dbo.Log_ResultHistory.IX_Log_ResultHistory_ResultID_UpdatedDate</li>
+            
+                <li>dbo.Map_UserProcess.IX_Map_UserProcess_Status_UserID_ProcessID</li>
+            
+                <li>dbo.Master_DocumentType.IX_Master_DocumentType_Status_ProcessID</li>
+            
+                <li>dbo.Master_DocumentTypeState.IX_Master_DocumentTypeState_DocumentStateID</li>
+            
+                <li>dbo.Master_Field.IX_MasterField_FieldModeID</li>
+            
+                <li>dbo.Master_Field.IX_MasterField_FieldName</li>
+            
+                <li>dbo.Master_Language.IX_Master_Language_Status_LanguageID</li>
+            
+                <li>dbo.Master_Process.IX_Master_Process_Status_ProcessID</li>
+            
+                <li>dbo.Master_User.IX_Master_User_Status_UserID</li>
+            
+                <li>dbo.Master_User.IX_Master_User_UserID_ClientId_Status</li>
+            
+            </ul>
+        
+
+        
+            <h3>Extra in Destination 10.100.14.102/CMRPlus_R6</h3>
+            <ul>
+            
+                <li>dbo.ClientInfo_Log_Audit.IX_ClientInfo_TokenID</li>
+            
+                <li>dbo.Log_FieldTrainingHistory.IX_Log_FieldTrainingHistory_TrainingStatus_HistoryID</li>
+            
+                <li>dbo.Map_FieldLookupUpload.IX_Map_FieldLookupUpload_FieldID</li>
+            
+                <li>dbo.Map_UserProcess.IX_Map_UserProcess_ProcessID_UserID_RoleID_Status</li>
+            
+                <li>dbo.Master_StatusFile.UQ__Master_S__C8EE2042A4242553</li>
+            
+                <li>dbo.Master_StatusFile.UQ__Master_S__C8EE2042BAF91FC7</li>
+            
+                <li>dbo.Master_SubModule.IX_Master_SubModule_ModuleID_Status</li>
+            
+                <li>dbo.Trans_DocumentLog.IX_Trans_DocumentLog_User_DocType_Active_Date</li>
+            
+            </ul>
+        
+
+        
+            <h3>Mismatched</h3>
+            
+                <h4>dbo.Log_Batch.IX_Log_Batch_BatchTypeID_DocumentTypeID_ProcessStartDate</h4>
+                <table>
+                    <thead><tr><th>Attribute</th><th>Source</th><th>Destination</th></tr></thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>root[1]['included']</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[0]['included']</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>root[2]['included']</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        
+    </div>
+    
+    <div class="section">
+        <h2>Triggers</h2>
+
+        
+
+        
+
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "sqlserver": {
+    "source": {
+      "server": "10.100.16.109",
+      "database": "CMRR6",
+      "username": "sa",
+      "password": "Welcome1",
+      "auth_type": "sql",
+      "timeout": 30,
+      "schemas": ["dbo"]
+    },
+    "destination": {
+      "server": "10.100.14.102",
+      "database": "CMRPlus_R6",
+      "username": "sa",
+      "password": "Welcome1",
+      "auth_type": "sql",
+      "timeout": 30,
+      "schemas": ["dbo"]
+    }
+  },
+
+  "mysql": {
+    "source": {
+      "server": "localhost",
+      "database": "source_db",
+      "username": "root",
+      "password": "rootpass",
+      "port": 3306,
+      "schemas": ["public"]
+    },
+    "destination": {
+      "server": "localhost",
+      "database": "dest_db",
+      "username": "root",
+      "password": "rootpass",
+      "port": 3306,
+      "schemas": ["public"]
+    }
+  },
+
+  "postgresql": {
+    "source": {
+      "server": "localhost",
+      "database": "pg_src",
+      "username": "pguser",
+      "password": "pgpass",
+      "port": 5432,
+      "schemas": ["public"]
+    },
+    "destination": {
+      "server": "localhost",
+      "database": "pg_dest",
+      "username": "pguser",
+      "password": "pgpass",
+      "port": 5432,
+      "schemas": ["public"]
+    }
+  },
+
+  "active_db": "sqlserver",
+
+  "compare_objects": {
+    "tables": true,
+    "views": false,
+    "constraints": true,
+    "indexes": true,
+    "stored_procedures": true,
+    "functions": true,
+    "triggers": true
+  },
+
+  "output": {
+    "formats": ["html"],
+    "html_report": "./reports/schema_diff_report.html",
+    "pdf_report": "./reports/schema_diff_report.pdf"
+  }
+}
